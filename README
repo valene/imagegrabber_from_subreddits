@@ -1,7 +1,10 @@
 Another one of my old quick-hack script to grab images from 
 subreddits of interest.
+
 Tested on Arch, ArchPi and Ubuntu.
 Grabs from : Imgur , gyfcat, (tested).
+
+Stores files at ~/.subreddit/subreddit_name
 
 Needs: Python3.xx, PRAW and BeautifulSoup.
 

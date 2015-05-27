@@ -8,6 +8,7 @@ from datetime import date
 from bs4 import BeautifulSoup
 import requests
 import os, sys, re, math, random, time 
+import urllib
 
 #preliminary login
 user_agent = ("Anon_is_Browser")
@@ -53,6 +54,14 @@ def extractlink(submissions):
                         links.append('http:'+imageurl)      
     return links
 
+
+def imageget(imglink,dldir):
+    fn0 = imglink.split('/')[-1]
+    flname = os.path.join(dir0,fn0)
+    fout = open("flname","wb")
+    fout.write(urllib.urlopen(imglink).read())
+    fout.close() 
+
 for subword in subwords:
     submit = r.get_subreddit(subword).get_hot(limit=lmts)
     #[print(subword ,":" ,x,"\n") for x in submit]
@@ -65,6 +74,7 @@ for subword in subwords:
     else:
         os.mkdir(dir0)
     for sublink in sublinks:
-        osInput = 'wget -q '+sublink +' -P '+dir0 
-        os.system(osInput)     
+        #osInput = 'wget -q '+sublink +' -P '+dir0  
+        #os.system(osInput)  
+	imageget(sublink,dir0)  
     print() 
