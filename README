@@ -10,10 +10,13 @@ Needs: Python3.xx, PRAW and BeautifulSoup.
 
 List of issues:
 	- Make the dir path OS independent.
-	- Avoid Wget and subprocess, grab using write functions.
 	- Make a way to avoid junk message printed to screen.
 
 TODO:
 =====
 	- Pass subreddit list from commandline
 	- Pass store directory from commandline
+
+27.06.15
+========
+	- imageget function with urllib.urlopen for get files instead of wget.
