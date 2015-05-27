@@ -1,0 +1,16 @@
+Another one of my old quick-hack script to grab images from 
+subreddits of interest.
+Tested on Arch, ArchPi and Ubuntu.
+Grabs from : Imgur , gyfcat, (tested).
+
+Needs: Python3.xx, PRAW and BeautifulSoup.
+
+List of issues:
+	- Make the dir path OS independent.
+	- Avoid Wget and subprocess, grab using write functions.
+	- Make a way to avoid junk message printed to screen.
+
+TODO:
+=====
+	- Pass subreddit list from commandline
+	- Pass store directory from commandline
